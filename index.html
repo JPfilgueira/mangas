@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Mangá</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: url('https://images.unsplash.com/photo-1563187058-8a01a446f0d9') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .manga-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .manga-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .manga-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .manga-card h3 {
+            padding: 10px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .manga-card p {
+            padding: 0 10px 10px;
+            text-align: justify;
+            font-size: 1em;
+        }
+
+        .manga-card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .header p {
+                font-size: 1.2em;
+            }
+
+            .content h2 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mangá Mania</h1>
+        <p>Explore o melhor dos Mangás</p>
+    </header>
+
+    <div class="content">
+        <h2>Últimos Lançamentos</h2>
+        <div class="manga-grid">
+            <div class="manga-card">
+                <img src="https://via.placeholder.com/400x300.png?text=Mangá+1" alt="Manga 1">
+                <h3>Mangá 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor tortor in arcu fermentum.</p>
+            </div>
+            <div class="manga-card">
+                <img src="https://via.placeholder.com/400x300.png?text=Mangá+2" alt="Manga 2">
+                <h3>Mangá 2</h3>
+                <p>Nulla tincidunt erat sit amet nibh porttitor, sed auctor enim tristique. Fusce aliquet est at lorem maximus.</p>
+            </div>
+            <div class="manga-card">
+                <img src="https://via.placeholder.com/400x300.png?text=Mangá+3" alt="Manga 3">
+                <h3>Mangá 3</h3>
+                <p>Suspendisse potenti. Aenean placerat felis sit amet urna dignissim, vel ullamcorper felis aliquet.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mangá Mania. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Exemplo de efeito interativo com JavaScript
+        const mangaCards = document.querySelectorAll('.manga-card');
+
+        mangaCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+</body>
+</html>
